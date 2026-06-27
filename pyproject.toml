@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fontfallback"
+version = "0.1"
+dependencies = [
+    "fonttools",
+    "pillow",
+]
+requires-python = ">=3"
+authors = [
+    { name = "bobbycyl", email = "bobbycyl@126.com" },
+]
+description = "A script that handles Pillow Font Fallback, a feature that we all wanted."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Repository = "https://github.com/bobbycyl/PillowFontFallback.git"
+"Bug Tracker" = "https://github.com/bobbycyl/PillowFontFallback/issues"
+
+[tool.ruff]
+line-length = 255
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+]
+ignore = [
+    "E501"
+]
